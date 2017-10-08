@@ -1,0 +1,17 @@
+Processor:
+	1) BIU = Bus Interface Unit
+		- control bus
+		- data bus
+		- memory bus
+		* this part is used for the communication of the processor with the outside parts
+
+		- uses it to talk to the memory, I/O and other kinds of outside stuff
+	2) EU = Execution Unit
+
+what registers are used for fetching instructions?
+	PC:
+		program counter
+
+	in 8088 CS:IP
+		CS: code segment
+		IP: instruction pointer
