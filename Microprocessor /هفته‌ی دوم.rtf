@@ -73,13 +73,31 @@
 \f0  \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
-\f2 \cf0 MOV:
+\f2 \cf0 \ul \ulc0 MOV:
+\f0 \ulnone  
+\f2    MOV des, src: copy source to destination \
+	- no move for flag registers (F = flag, it is 16 bit)\
+	- no immediate load to segment registers (only register move)\
+	- same size (destination and source)\
+\ul Segmented
 \f0  
-\f2 -
-\f0  
-\f2 MOV des, src: copy source to destination \
-	- no move for flag registers \
-	- 
+\f2 Memory:\
+\ulnone CS: code segment 	\
+ES: extra segment\
+SS: stack segment\
+DS: data segment \
+logical address:	segment 
+\f1\b :
+\f2\b0  offset\
+physical address:  segment*16 + offset \
+segment registers: CS, ES, SS, DS\
+physical to logical is not unique. \
+\ul The Stack:\
+\ulnone the stack is a memory area intended for storing temporary values. \
+SS : SP (stack pointer) \
+some instructions: push, pop, call, ret\
+the video also explains how the stack works. \
+
 \f0 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qr\partightenfactor0
 
@@ -90,10 +108,54 @@
 
 \f0\b0 \'c8\'cd\'cb \'c7\uc0\u1740 \'e4 \'cc\'e1\'d3\'e5 \'e3\'cf
 \f2 \uc0\u8204 
-\f0 \'e5\'c7\uc0\u1740  \'c2\'cf\'d1\'d3 \'cf\'e5\u1740  \'c7\'d3\'ca. 
-\f1\b \
+\f0 \'e5\'c7\uc0\u1740  \'c2\'cf\'d1\'d3 \'cf\'e5\u1740  \'c7\'d3\'ca. \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
-\f0 \'e6\uc0\u1740 \'cf\u1740 \'e6\u1740 
+\f2 \cf0 ++
+\f0  
+\f2 operands
+\f0  
+\f2 in
+\f0  
+\f2 an
+\f0  
+\f2 instruction:
+\f0 \
+	
+\f2 1
+\f0 . 
+\f2 registers
+\f0  
+\f2 =
+\f0  
+\f2 we go to the register file, get the contents of the register and continue with the instruction \
+		// fast \
+		// no bus access \
+		// short instructions 
+\f0 \
+
+\f2 	2. numbers -> immediate  12H\
+		// 8 or 16 bits\
+		// no bus access\
+		// can only be source operand \
+	3. memory \
+			// can require computation \
+		>> direct addressing [3965]\
+		>> register indirect [BX]\
+		>> based relative addressing mode	[BX+6]  [BP]-10 (base: register)\
+		>> index relative addressing mode [SI+5]	(base: the constant number)\
+		>> based indexed addressing mode\
+\
+** little endian and big endian \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qr\partightenfactor0
+
+\f0 \cf0 \'cf\'d1 \'c7\'e6\'e1\uc0\u1740  \'81\'d1 \'c7\'d1\'d2\'d4 \'ca\'d1 \'cf\'d1 \'ce\'c7\'e4\'e5 \'c8\'c7 \'c2\'cf\'d1\'d3 \'c8\u1740 \'d4\'ca\'d1 \'c7\'d3\'ca\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\b \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qr\partightenfactor0
+
+\f0 \cf0 \'e6\uc0\u1740 \'cf\u1740 \'e6\u1740 
 \b0  
 \b \'d3\'e6\'e3
 \f1 :\
@@ -124,4 +186,91 @@
 \f2 \uc0\u8204 
 \f0 \uc0\u1740  \'81\'d1\'e6\'d3\'d3\'e6\'d1 \'c7\'cc\'d1\'c7\u1740  \'c8\'d1\'e4\'c7\'e3\'e5
 \f2 \uc0\u8204 
-\f0 \'e5\'c7 \'c7\'d3\'ca. }
+\f0 \'e5\'c7 \'c7\'d3\'ca. \
+\'cf\'d1 \'d8\'d1\'c7\'cd\uc0\u1740  \'e6\'e4
+\f2 \uc0\u8204 
+\f0 \'e4\uc0\u1740 \'e6\'e3\'e4 \'e3\'c7 \u1740 \u1705  \'cd\'c7\'dd\'d9\'e5 \'c8\'d1\'c7\u1740  \'cf\'c7\'cf\'e5 \'e6 \'c8\'d1\'e4\'c7\'e3\'e5 \'cf\'c7\'d1\u1740 \'e3\'a1 \'cf\'d1 \'d3\'c7\u1740 \'d1 \'d8\'d1\'c7\'cd\u1740 
+\f2 \uc0\u8204 
+\f0 \'e5\'c7 \'e3\'e3\uc0\u1705 \'e4 \'c7\'d3\'ca \'cf\'c7\'cf\'e5 \'e6 \'c8\'d1\'e4\'c7\'e3\'e5 \'cf\'d1 \'cd\'c7\'dd\'d9\'e5
+\f2 \uc0\u8204 
+\f0 \'e5\'c7\uc0\u1740  \'90\'e6\'e4\'c7\'90\'e6\'e4 \'c8\'c7\'d4\'e4\'cf. \'d1\'c7\'e5
+\f2 \uc0\u8204 
+\f0 \'e5\'c7\uc0\u1740  \'c7\'d1\'ca\'c8\'c7\'d8\u1740  \'c8\'c7 \'cd\'c7\'dd\'d9\'e5 \'da\'c8\'c7\'d1\'ca\'e4\'cf \'c7\'d2
+\f2 :
+\f0  
+\f2 address
+\f0  
+\f2 lines
+\f0  
+\f2 \uc0\u8234 -
+\f0 \uc0\u8236  
+\f2 data
+\f0  
+\f2 lines
+\f0  
+\f2 \uc0\u8234 -\uc0\u8236  control lines\
+
+\f0 \'81\uc0\u1740 \'e4
+\f2 \uc0\u8204 
+\f0 \'e5\'c7\uc0\u1740 
+\f2  
+\f0 \uc0\u1784 \u1776 \u1784 \u1784 
+\f2  
+\f0 \'d1\'c7
+\f2  
+\f0 \'e4\'90\'c7\'e5 \'e3\uc0\u1740 
+\f2 \uc0\u8204 
+\f0 \uc0\u1705 \'e4\u1740 \'e3
+\f2 : this is sequential and synchrony \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 * clock \
+* reset: if high for 4 clock cycles it will be reset\
+* ready \
+* AD0 - AD7 + A8 - A15 + A16/S3 - A19/S0: we have 20 bits of address buses \
+*
+\f0  
+\f2 AD0
+\f0  
+\f2 -
+\f0  
+\f2 AD7:
+\f0  
+\f2 the first 8 pins are the multiplex of  address bus and data bus \
+* A16/S3 - A19/S0: these 4 pins are a multiplex of \
+* RD and WR: the control busses, they are active low \
+* IO/M(bar): chooses if we are talking to the IO or the memory, if 1 the IO, if 0 the memory
+\f0 \
+
+\f2 *
+\f0  
+\f2 DEN:
+\f0  
+\f2 data
+\f0  
+\f2 enable,
+\f0  
+\f2 when low it means that it wants to get or send data
+\f0 \
+
+\f2 * DT/R(bar): transmit or receive \
+* Vcc and Gnd: it has 2 grounds because we need Gnd more than anything and we want to be able to access it more easily \
+* MN/MX(bar): the mode of the processor (if we are woking in minimal mode or not). 1 is in minimal mode\
+* ALE: address latch enable - it means you should latch the address\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qr\partightenfactor0
+
+\f0 \cf0 \'dd\'d1\'de \uc0\u1784 \u1776 \u1784 \u1782  \'c8\'c7 \u1784 \u1776 \u1784 \u1784  \'c7\u1740 \'e4 \'c7\'d3\'ca \u1705 \'e5 \'c8\'e5 \'cc\'c7\u1740  \u1784  \'c8\u1740 \'ca \u1777 \u1782  \'c8\u1740 \'ca \'c8\'c7\'d3 \'cf\'c7\'cf\'e5 \'cf\'c7\'d1\'cf. \
+\'c7\uc0\u1740 \'e4\'ca\'e1 \'c8\'d1\'c7\u1740  \u1705 \'c7\'d1 \'c8\'c7 \u1784 \u1776 \u1784 \u1784  \u1740 \u1705  \'8d\u1740 \'81 \u1705 \'e3\u1705 \u1740  \'e5\'e3 \'d8\'d1\'c7\'cd\u1740  \u1705 \'d1\'cf \u1705 \'e5 \'ca\'e6\'d4 \u1740 \'e5 
+\f2 clock
+\f0  
+\f2 generator
+\f0  \'e5\'e3 \'cf\'c7\'d1\'cf \uc0\u1705 \'e5 \'e3\u1740 
+\f2 \uc0\u8204 
+\f0 \'ca\'e6\'c7\'e4 \'c8\'e5 \uc0\u1784 \u1776 \u1784 \u1784  \'e6\'d5\'e1 \u1705 \'d1\'cf. \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f2 \cf0 power
+\f0  
+\f2 on
+\f0  
+\f2 reset: because we want to be sure we start off at the very first instruction. \
+so we need to have a circuit that creates 5v for 4 clock cycles and then 0 so it would be reset on power on and then not reset again unless we explicitly  want it to. (one register and one capacitor) see the circuit if needed. }
