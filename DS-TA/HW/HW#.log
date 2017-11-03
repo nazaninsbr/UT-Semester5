@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.8.29)  3 NOV 2017 19:28
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2017.8.29)  3 NOV 2017 19:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1223,31 +1223,26 @@ Type  H <return>  for immediate help.
 l.195 \end{flushright}
                       
 ? 
-
-Underfull \hbox (badness 10000) in paragraph at lines 210--223
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 266--268
 [][]
  []
 
-[4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 265--267
-[][]
- []
-
-[6] [7] [8] [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 401.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 401.
+[5] [6] [7] [8] [9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 402.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 402.
  (./HW#.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 401.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 401.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 401.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 402.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 402.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 402.
  ) 
 Here is how much of TeX's memory you used:
- 21460 strings out of 494511
- 407023 string characters out of 6166320
- 588137 words of memory out of 5000000
- 25158 multiletter control sequences out of 15000+600000
+ 21447 strings out of 494511
+ 406885 string characters out of 6166320
+ 610137 words of memory out of 5000000
+ 25145 multiletter control sequences out of 15000+600000
  534632 words of font info for 54 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 46i,8n,94p,10404b,2086s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,8n,94p,10404b,2101s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on HW#.pdf (9 pages).

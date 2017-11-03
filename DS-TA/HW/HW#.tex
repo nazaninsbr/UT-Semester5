@@ -200,62 +200,63 @@ return C;
 	باید ۱ عدد با باقیمانده‌ی ۱ بر ۳ و یا ۲ عدد با باقیمانده‌ی ۲ بر ۳ را حذف کنیم. چون می‌خواهیم بزرگ‌ترین عدد ممکن را چاپ کنیم پس باید سعی کنیم کوچکترین اعدادی که شرایط گفته شده را دارند حذف کنیم. پس از انتها به ابتدا روی آرایه حرکت می‌کنیم و \lr{index} اولین عناصری که شرایط گفته شده را دارند ذخیره می‌کنیم. اگر ۱ عدد با باقیمانده‌ی ۱ بر ۳ پیدا شد همان عدد را حذف کرده و از حلقه خارج می‌شویم چون قطعا کم شدن ۱ رقم در مقایسه با کم شدن ۲ رقم عدد بزرگ‌تری تولید می‌کند. \\
 	\lr{-} اگر باقیمانده بر ۳ برابر با ۲ بود:\\
 	باید ۱ عدد با باقیمانده‌ی ۲ بر ۳ و یا ۲ عدد با باقیمانده‌ی ۱ بر ۳ را حذف کنیم. روش انجام این کار هم مشابه بالا است.\\
-	اگر موفق به حذف به طوری که شرط بخشپذیری درست شود نشویم عبارت \lr{not possible} را برمی‌گردانیم.
+	اگر موفق به حذف به طوری که شرط بخشپذیری درست شود نشویم عبارت \lr{not possible} را برمی‌گردانیم.\\
+	زمان اجرا با توجه به الگوریتم مرتب سازی استفاده شده می‌تواند متفاوت باشد ولی اگر بخواهیم فقط هزینه‌ی زمانی بخش پیدا کردن عدد را بیان کنیم، این هزینه‌ی زمانی \lr{O(n)} خواهد بود
 	\item 
 	\begin{enumerate}
 		\item) پاسخ: \lr{3 * 1 + 2 - 9} \\
 		برای کسب اطلاعات بیشتر درباره‌ی نحوه‌ی تبدیل عبارات \lr{postfix} به \lr{infix} به لینک زیر مراجعه کنید: \\
 		\lr{\href{http://www.cs.man.ac.uk/~pjj/cs212/fix.html}{Infix, Postfix and Prefix}.}\\
 		\lr{\href{http://scanftree.com/Data_Structure/postfix-to-infix}{Postfix to Infix Conversion}.}
-		\item) با الگوریتم زیر و با استفاده از استک این تبدلی را انجام می‌دهیم:\\
-		۱- مغیر جدیدی تعریف می‌کنیم که عبارت \lr{postfix} را در آن ذخیره کنیم. آن را \lr{result} می‌نامیم، هم چنین یک استک خالی تعریف می‌کنیم. (\lr{string result = ""})\\
+		\item) با الگوریتم زیر و با استفاده از استک این تبدیل را انجام می‌دهیم:\\
+		۱- متغیر جدیدی تعریف می‌کنیم که عبارت \lr{postfix} را در آن ذخیره کنیم. آن را \lr{result} می‌نامیم، هم چنین یک استک خالی تعریف می‌کنیم. (\lr{string result = ""})\\
 		۲- عبارت \lr{infix} را کاراکتر به کارارکتر از چپ به راست می‌خوانیم.\\
 		۳- اگر کاراکتر خوانده شده یک عملوند بود (عدد بود) آن را به \lr{result} اضافه می‌کنیم.\\
 		۴- اگر کارکتر خوانده شده یک عملگر است:\\
-			۴-۱ : اگر یک عملگر است که اولویت اجرای آن از اولویت اجرای آن از اولویت اجرای عملگر ابتدای استک بیشتر بود یا استک خالی بود این عملگر را در استک \lr{push} می‌کنیم\\
-			۴ -۲ : در غیر این صورت عملگر‌های موجود در استک را یکی یکی \lr{pop} می‌کنیم و هر عملگری که \lr{pop} می‌شود را به \lr{result} اضافه می‌کنیم تا به جایی برسیم که اولویت اجرای این عملگر از عملگر روس استک بیشتر باشد یا استک خالی شده باشد، در اینجا عملگر جدید را \lr{push} می‌کنیم. \\
-		۵- اگر کاراکتر خوانده شده ( است آن را در ساتک \lr{push} می‌کنیم. \\
+			۴-۱ : اگر یک عملگر است که اولویت اجرای آن از اولویت اجرای عملگر ابتدای استک بیشتر بود یا استک خالی بود این عملگر را در استک \lr{push} می‌کنیم\\
+			۴ -۲ : در غیر این صورت عملگر‌های موجود در استک را یکی یکی \lr{pop} می‌کنیم و هر عملگری که \lr{pop} می‌شود را به \lr{result} اضافه می‌کنیم تا به جایی برسیم که اولویت اجرای این عملگر از عملگر روی استک بیشتر باشد یا استک خالی شده باشد، در اینجا عملگر جدید را \lr{push} می‌کنیم. \\
+		۵- اگر کاراکتر خوانده شده ( است آن را در استک \lr{push} می‌کنیم. \\
 		۶- اگر کارارکتر خوانده شده ) است، محتوای استک را \lr{pop} کرده و به \lr{result} اضافه می‌کنیم تا به ( برسیم. \\
 		۷- مراحل ۲ تا ۶ را ادامه می‌دهیم تا کل عبارت ورودی خوانده شود. \\
 		۸- اگر استک خالی نبود محتوای آن را \lr{pop} کرده و به \lr{result} اضافه می‌کنیم\\
-		\\
-		کد بخش ۲ تا ۶ به شکل زیر خواهد بود:
+		هزینه‌ی زمانی: \lr{O(n*m) m<=n} دلیل ضرب شدن در \lr{m} حلقه‌ی \lr{while} داخلی توصیف شده در بالا است
+	% 	کد بخش ۲ تا ۶ به شکل زیر خواهد بود:
 
-	\begin{latin}
-	\begin{flushright}				
-	\begin{lstlisting}[language=C++]
-	for (i = 0, k = -1; exp[i]; ++i)
-    {
-        // If the scanned character is an operand, add it to output.
-        if (isOperand(exp[i]))
-            exp[++k] = exp[i];
+	% \begin{latin}
+	% \begin{flushright}				
+	% \begin{lstlisting}[language=C++]
+	% for (i = 0, k = -1; exp[i]; ++i)
+ %    {
+ %        // If the scanned character is an operand, add it to output.
+ %        if (isOperand(exp[i]))
+ %            exp[++k] = exp[i];
          
-        // If the scanned character is an ‘(‘, push it to the stack.
-        else if (exp[i] == '(')
-            push(stack, exp[i]);
+ %        // If the scanned character is an ‘(‘, push it to the stack.
+ %        else if (exp[i] == '(')
+ %            push(stack, exp[i]);
          
-        // If the scanned character is an ‘)’, pop and output from the stack 
-        // until an ‘(‘ is encountered.
-        else if (exp[i] == ')')
-        {
-            while (!isEmpty(stack) && peek(stack) != '(')
-                exp[++k] = pop(stack);
-            if (!isEmpty(stack) && peek(stack) != '(')
-                return -1; // invalid expression             
-            else
-                pop(stack);
-        }
-        else // an operator is encountered
-        {
-            while (!isEmpty(stack) && Precedence(exp[i]) <= Precedence(peek(stack)))
-                exp[++k] = pop(stack);
-            push(stack, exp[i]);
-        }
+ %        // If the scanned character is an ‘)’, pop and output from the stack 
+ %        // until an ‘(‘ is encountered.
+ %        else if (exp[i] == ')')
+ %        {
+ %            while (!isEmpty(stack) && peek(stack) != '(')
+ %                exp[++k] = pop(stack);
+ %            if (!isEmpty(stack) && peek(stack) != '(')
+ %                return -1; // invalid expression             
+ %            else
+ %                pop(stack);
+ %        }
+ %        else // an operator is encountered
+ %        {
+ %            while (!isEmpty(stack) && Precedence(exp[i]) <= Precedence(peek(stack)))
+ %                exp[++k] = pop(stack);
+ %            push(stack, exp[i]);
+ %        }
  
-    }
-	\end{lstlisting}
-	\end{flushright}								
-	\end{latin}
+ %    }
+	% \end{lstlisting}
+	% \end{flushright}								
+	% \end{latin}
 	\end{enumerate}
 	\item از ساختار داده‌ای به نام \lr{Dequeue} که نوعی صف است استفاده می‌کنیم. تفاوت آن با صف عادی این است که عناصر می‌توانند هم به سر و هم به ته آن اضافه شوند و یا حذف شوند. صفی به طول \lr{k} تعریف می‌کنیم که در آن عنصر هدف هر ریز مجموعه را در آن‌ها نگه می‌داریم. عنصر هدف هر زیر مجموعه عضوی از مجموعه است که در زیر مجموعه \lr{k} تایی ما موجود است و از تمام اعضای آن زیر مجموعه بزرگ‌تر است. در اسن صف ترتیب نزولی برای اعضا حفظ می‌کنیم.\\
 	با شروع از زیر مجموعه‌ی \lr{k} تایی اول بزرگ‌ترین عضو آن را به سر صف اضافه می‌کنیم.\\
