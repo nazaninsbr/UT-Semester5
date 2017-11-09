@@ -1,13 +1,13 @@
 module frequency_regulator(input psi, clk, rst, input [7:0] setPerriod, input [3:0] peresentdiv, output reg [3:0] adjusteddiv);
  reg oldpsi;
  reg [7:0] duration;
- reg [7:0] adjustedDiv;
- reg [7:0] peresentDiv;
+ reg [7:0] adjDiv;
+ reg [7:0] presDiv;
  reg increment, decrement;
  always@(posedge clk, posedge rst)begin 
   if(rst) begin
    oldpsi<=1'b0;
-   peresentDiv <= {4'b1011,  peresentdiv};
+   presDiv <= {4'b1011,  peresentdiv};
   end
   else oldpsi<=psi;
  end
@@ -42,15 +42,15 @@ module frequency_regulator(input psi, clk, rst, input [7:0] setPerriod, input [3
  end
  always@(posedge clk, posedge rst)begin
   if(rst) begin
-   adjustedDiv<=0;
+   adjDiv<=0;
   end 
   else begin 
    if({oldpsi, psi}==2'b10)begin
-    adjustedDiv <= (increment)?peresentDiv+1:((decrement)?peresentDiv-1:peresentDiv);
+    adjDiv <= (increment)?presDiv+1:((decrement)?presDiv-1:presDiv);
    end 
   end
  end
  always@(posedge clk)begin
-  adjusteddiv <= adjustedDiv[3:0];
+  adjusteddiv <= adjDiv[3:0];
  end
 endmodule
