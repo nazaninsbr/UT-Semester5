@@ -1,0 +1,47 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red255\green0\blue0;}
+{\*\expandedcolortbl;;\csgenericrgb\c100000\c0\c0;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 1. fabric of a silicon chip: the underlying structure of the device \
+\
+2. geometry of an IC: the size of the individual structures constructed on the chip \
+\
+\
+
+\b \cf2 SRAM Vs. Antifuse \
+
+\b0 \cf0 \
+
+\b \ul SRAM
+\b0 \ulnone \
+1) can be configured over and over again \
+2) new ideas can be quickly tested and implemented \
+3) have to be reconfigured on power on thus you either need a external memory device or an on board microprocessor \
+4) security matters! since you are storing your config on an external memory then it can be read and stolen easily \'85. for this reason they are adding the concept of bitstream encryption. \
+5) battery backup needed for encryption key\
+6) can be programed while resident in the system \
+\
+
+\b \ul Antifuse 
+\b0 \ulnone \
+1- programmed offline using special device programmer \
+2- non-volatile (the configuration remains when the system is powered down)\
+-> immediately available as soon as power is applied \
+-> no need for an external memory \
+\'97> saves real estate\
+\'97> saves the cost of additional component \
+3- the interconnects are immune to effects of radiation \
+-> important for military use \
+-> if we want a chip for radiation intensive situations we should protect the flip flops in the design by triple redundancy design (having three copies of each register and taking a majority vote)\
+4- you can hide your program after the design is finalized so that no one else can read it \
+5- awful for prototyping because once programmed the program is set in stones and can not be changed \
+\
+\
+\
+\
+\
+\
+}
