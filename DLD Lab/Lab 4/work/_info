@@ -1,0 +1,220 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Apple\Desktop\dld lab
+vclockDivider
+Z1 !s100 390m]UF41FW>0i70>LZgc0
+Z2 INONNJ:36XU5nb74zmi0QV3
+Z3 Vi8F?I;m1SUm1E0lAmF2T]0
+Z4 dC:\Users\Apple\Desktop\Lab 4
+Z5 w1512138032
+Z6 8C:/Users/Apple/Desktop/Lab 4/clockDivider.v
+Z7 FC:/Users/Apple/Desktop/Lab 4/clockDivider.v
+L0 1
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/Apple/Desktop/Lab 4/clockDivider.v|
+Z10 o-work work -O0
+Z11 nclock@divider
+Z12 !s108 1512149760.169000
+Z13 !s107 C:/Users/Apple/Desktop/Lab 4/clockDivider.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vcomparator
+Z14 !s100 JKi7^WK345j1O0eMzTjBB3
+Z15 IIcfe_n5TkQ[AU_eI`kH7P0
+Z16 V^7Em9=B8PgFd1OAH79A0M2
+R4
+Z17 w1512144812
+Z18 8C:/Users/Apple/Desktop/Lab 4/comparator.v
+Z19 FC:/Users/Apple/Desktop/Lab 4/comparator.v
+L0 1
+R8
+r1
+31
+Z20 !s90 -reportprogress|300|-work|work|C:/Users/Apple/Desktop/Lab 4/comparator.v|
+R10
+Z21 !s108 1512149760.429000
+Z22 !s107 C:/Users/Apple/Desktop/Lab 4/comparator.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vFIFO
+Z23 !s100 N5lengQDBKJK@ABba2SX13
+Z24 I5ZziVzP^56KPTaa3AmHf20
+Z25 VHHZPNZn];8Ek_YBAZMJ]G0
+R4
+Z26 w1512148339
+Z27 8C:/Users/Apple/Desktop/Lab 4/FIFO.v
+Z28 FC:/Users/Apple/Desktop/Lab 4/FIFO.v
+L0 1
+R8
+r1
+31
+Z29 !s90 -reportprogress|300|-work|work|C:/Users/Apple/Desktop/Lab 4/FIFO.v|
+R10
+Z30 n@f@i@f@o
+Z31 !s108 1512149760.059000
+Z32 !s107 C:/Users/Apple/Desktop/Lab 4/FIFO.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vpwm
+Z33 !s100 iSLT;FUHc32MPm[U`S50C2
+Z34 InzXAghHWVm5nD_kT]GWSN0
+Z35 VjllWeD[l:;Y:o3M4c3GBJ1
+R4
+Z36 w1512139331
+Z37 8C:/Users/Apple/Desktop/Lab 4/pwm.v
+Z38 FC:/Users/Apple/Desktop/Lab 4/pwm.v
+L0 1
+R8
+r1
+31
+Z39 !s90 -reportprogress|300|-work|work|C:/Users/Apple/Desktop/Lab 4/pwm.v|
+R10
+Z40 !s108 1512149760.009000
+Z41 !s107 C:/Users/Apple/Desktop/Lab 4/pwm.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vramModule
+Z42 !s100 dhOoR;JzN2lzM;QZ;eDOB1
+Z43 I?VXD`m:NPnbX1?E;WPVUN3
+Z44 Vi_6GikZkeGRhcSkFNAB0;2
+R4
+Z45 w1512147316
+Z46 8C:/Users/Apple/Desktop/Lab 4/ramModule.v
+Z47 FC:/Users/Apple/Desktop/Lab 4/ramModule.v
+L0 1
+R8
+r1
+31
+Z48 !s90 -reportprogress|300|-work|work|C:/Users/Apple/Desktop/Lab 4/ramModule.v|
+R10
+Z49 nram@module
+Z50 !s108 1512149760.109000
+Z51 !s107 C:/Users/Apple/Desktop/Lab 4/ramModule.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vsevenSegment
+Z52 !s100 K29CLRTOAF=BLBRUEV6be2
+Z53 I9o@Q95JcWZI1cdoKnNLcz2
+Z54 VcoE6=TXYliET13Zn5;Be>2
+R4
+Z55 w1512140662
+Z56 8C:/Users/Apple/Desktop/Lab 4/sevenSegment.v
+Z57 FC:/Users/Apple/Desktop/Lab 4/sevenSegment.v
+L0 1
+R8
+r1
+31
+Z58 !s90 -reportprogress|300|-work|work|C:/Users/Apple/Desktop/Lab 4/sevenSegment.v|
+R10
+Z59 nseven@segment
+Z60 !s108 1512149759.919000
+Z61 !s107 C:/Users/Apple/Desktop/Lab 4/sevenSegment.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vtest_clockDivider
+Z62 !s100 c^EFZ;lz]aazd=3<n`fFU1
+Z63 IUBKMjL58Q>l2^dTOS;Qeh3
+Z64 V]QI@zSTKj?fQ:A>V>YSnQ2
+R4
+Z65 w1512138396
+Z66 8C:/Users/Apple/Desktop/Lab 4/test_clockDivider.v
+Z67 FC:/Users/Apple/Desktop/Lab 4/test_clockDivider.v
+L0 1
+R8
+r1
+31
+Z68 !s90 -reportprogress|300|-work|work|C:/Users/Apple/Desktop/Lab 4/test_clockDivider.v|
+R10
+Z69 ntest_clock@divider
+Z70 !s108 1512149760.229000
+Z71 !s107 C:/Users/Apple/Desktop/Lab 4/test_clockDivider.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vtest_comparator
+Z72 !s100 5dM<cWQBcmeA5lQaoYicT3
+Z73 IIXeU:OAzkkIWFWbHZG`Oh2
+Z74 VCcBGnAc>VJc0Q@QJ9F7=91
+R4
+Z75 w1512145218
+Z76 8C:/Users/Apple/Desktop/Lab 4/test_comparator.v
+Z77 FC:/Users/Apple/Desktop/Lab 4/test_comparator.v
+L0 1
+R8
+r1
+31
+Z78 !s90 -reportprogress|300|-work|work|C:/Users/Apple/Desktop/Lab 4/test_comparator.v|
+R10
+!i10b 1
+!s85 0
+Z79 !s108 1512149760.479000
+Z80 !s107 C:/Users/Apple/Desktop/Lab 4/test_comparator.v|
+!s101 -O0
+vtest_fifo
+!i10b 1
+!s100 1X@^<L@G1?fUBmc]Vk5622
+If=S42jH6E;agliFG6TgXN2
+Z81 Vfng9ga4d6bDb?1gZF_dVG0
+R4
+w1512149757
+Z82 8C:/Users/Apple/Desktop/Lab 4/test_fifo.v
+Z83 FC:/Users/Apple/Desktop/Lab 4/test_fifo.v
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1512149760.609000
+!s107 C:/Users/Apple/Desktop/Lab 4/test_fifo.v|
+Z84 !s90 -reportprogress|300|-work|work|C:/Users/Apple/Desktop/Lab 4/test_fifo.v|
+!s101 -O0
+R10
+vtest_pwm
+Z85 !s100 LD7[W11jQ2Zz1li;92C8a1
+Z86 I0^KSmn:]U=]`G2PfaUD600
+Z87 V6jfQfT>_3Tkf;lJ71b;L]2
+R4
+Z88 w1512139387
+Z89 8C:/Users/Apple/Desktop/Lab 4/test_pwm.v
+Z90 FC:/Users/Apple/Desktop/Lab 4/test_pwm.v
+L0 1
+R8
+r1
+31
+Z91 !s90 -reportprogress|300|-work|work|C:/Users/Apple/Desktop/Lab 4/test_pwm.v|
+R10
+Z92 !s108 1512149760.279000
+Z93 !s107 C:/Users/Apple/Desktop/Lab 4/test_pwm.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vtest_Seg
+Z94 !s100 `@P0@O7[;?C=MLgJS7K4Z0
+Z95 IbD]JEZD<0:g0[QMUk=OBh2
+Z96 VOR<;Tc[Xnj=V4=BB`LO_Q2
+R4
+Z97 w1512140916
+Z98 8C:/Users/Apple/Desktop/Lab 4/test_Seg.v
+Z99 FC:/Users/Apple/Desktop/Lab 4/test_Seg.v
+L0 1
+R8
+r1
+31
+Z100 !s90 -reportprogress|300|-work|work|C:/Users/Apple/Desktop/Lab 4/test_Seg.v|
+R10
+Z101 ntest_@seg
+Z102 !s108 1512149760.359000
+Z103 !s107 C:/Users/Apple/Desktop/Lab 4/test_Seg.v|
+!i10b 1
+!s85 0
+!s101 -O0

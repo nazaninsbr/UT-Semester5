@@ -1,0 +1,87 @@
+{C:/Users/Apple/Desktop/Lab 4/test_fifo.v} {1 {vlog -work work {C:/Users/Apple/Desktop/Lab 4/test_fifo.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module test_fifo
+
+Top level modules:
+	test_fifo
+
+} {} {}} {C:/Users/Apple/Desktop/Lab 4/multipleEcho.v} {1 {vlog -work work {C:/Users/Apple/Desktop/Lab 4/multipleEcho.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+
+} {} {}} {C:/Users/Apple/Desktop/Lab 4/clockDivider.v} {1 {vlog -work work {C:/Users/Apple/Desktop/Lab 4/clockDivider.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module clockDivider
+
+Top level modules:
+	clockDivider
+
+} {} {}} {C:/Users/Apple/Desktop/Lab 4/FIFO.v} {1 {vlog -work work {C:/Users/Apple/Desktop/Lab 4/FIFO.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module FIFO
+
+Top level modules:
+	FIFO
+
+} {} {}} {C:/Users/Apple/Desktop/Lab 4/pwm.v} {1 {vlog -work work {C:/Users/Apple/Desktop/Lab 4/pwm.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module pwm
+
+Top level modules:
+	pwm
+
+} {} {}} {C:/Users/Apple/Desktop/Lab 4/test_Seg.v} {1 {vlog -work work {C:/Users/Apple/Desktop/Lab 4/test_Seg.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module test_Seg
+
+Top level modules:
+	test_Seg
+
+} {} {}} {C:/Users/Apple/Desktop/Lab 4/binarySearchADC.v} {1 {vlog -work work {C:/Users/Apple/Desktop/Lab 4/binarySearchADC.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+
+} {} {}} {C:/Users/Apple/Desktop/Lab 4/test_pwm.v} {1 {vlog -work work {C:/Users/Apple/Desktop/Lab 4/test_pwm.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module test_pwm
+
+Top level modules:
+	test_pwm
+
+} {} {}} {C:/Users/Apple/Desktop/Lab 4/sevenSegment.v} {1 {vlog -work work {C:/Users/Apple/Desktop/Lab 4/sevenSegment.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module sevenSegment
+
+Top level modules:
+	sevenSegment
+
+} {} {}} {C:/Users/Apple/Desktop/Lab 4/ramModule.v} {1 {vlog -work work {C:/Users/Apple/Desktop/Lab 4/ramModule.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ramModule
+
+Top level modules:
+	ramModule
+
+} {} {}} {C:/Users/Apple/Desktop/Lab 4/test_comparator.v} {1 {vlog -work work {C:/Users/Apple/Desktop/Lab 4/test_comparator.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module test_comparator
+
+Top level modules:
+	test_comparator
+
+} {} {}} {C:/Users/Apple/Desktop/Lab 4/comparator.v} {1 {vlog -work work {C:/Users/Apple/Desktop/Lab 4/comparator.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module comparator
+
+Top level modules:
+	comparator
+
+} {} {}} {C:/Users/Apple/Desktop/Lab 4/singleEcho.v} {1 {vlog -work work {C:/Users/Apple/Desktop/Lab 4/singleEcho.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+
+} {} {}} {C:/Users/Apple/Desktop/Lab 4/test_clockDivider.v} {1 {vlog -work work {C:/Users/Apple/Desktop/Lab 4/test_clockDivider.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module test_clockDivider
+
+Top level modules:
+	test_clockDivider
+
+} {} {}}
