@@ -1,0 +1,4 @@
+module MatrixSlice (input [2:0] PixelRow, input [6:0] Char, 
+                    output [8:0] MtxPntr);
+   assign MtxPntr = {Char - 32, PixelRow[2:0]}; 
+endmodule
