@@ -1,0 +1,10 @@
+module CharacterPixel(
+
+);
+
+	wire [7:0] Vector = {
+	
+	};
+	assign Pixel = Vector[indx];
+	
+endmodule 

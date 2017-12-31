@@ -6,4 +6,4 @@ module CharacterPointer (input [9:0] PixelRow, PixelCol, output [12:0] CharPntr)
    assign ScreenPos = PixelCol [9:3];  
           // 80 Positions=640/8 (8 is Character Pixel Width)
    assign CharPntr =  ScreenLine*80 + ScreenPos;
-endmodule 
+endmodule

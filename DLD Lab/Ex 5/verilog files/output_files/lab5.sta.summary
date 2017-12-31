@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'matixClk'
+Slack : -5.408
+TNS   : -342.718
+
+Type  : Slow Model Setup 'SynchClock'
+Slack : -3.649
+TNS   : -59.134
+
+Type  : Slow Model Hold 'SynchClock'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow Model Hold 'matixClk'
+Slack : 1.461
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'matixClk'
+Slack : -1.814
+TNS   : -346.291
+
+Type  : Slow Model Minimum Pulse Width 'SynchClock'
+Slack : -1.631
+TNS   : -26.071
+
+Type  : Fast Model Setup 'matixClk'
+Slack : -1.314
+TNS   : -76.188
+
+Type  : Fast Model Setup 'SynchClock'
+Slack : -0.766
+TNS   : -10.520
+
+Type  : Fast Model Hold 'SynchClock'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'matixClk'
+Slack : 0.561
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'matixClk'
+Slack : -1.423
+TNS   : -271.750
+
+Type  : Fast Model Minimum Pulse Width 'SynchClock'
+Slack : -1.380
+TNS   : -21.380
+
+------------------------------------------------------------

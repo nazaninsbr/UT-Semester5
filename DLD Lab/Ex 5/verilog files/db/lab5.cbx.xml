@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="lab5">
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab5|charrom:inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_v581.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab5|displayMem:instdisplay|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_po71.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
